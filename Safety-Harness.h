@@ -16,6 +16,11 @@
 #include <signal.h>
 //Memsafe system
 /****/
+
+#define MEMSAFE_INNIT safe_t heap;\
+    heap.safe_f = safe;\
+    heap.safe_f(&heap);
+
 typedef struct safe {
     void **array;
     
